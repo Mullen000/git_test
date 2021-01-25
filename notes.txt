@@ -1,0 +1,46 @@
+git基本操作
+－－－－－－－－－－－－
+git init 创建一个空的仓库
+
+创建版本的两个步骤：
+git add 文件名
+git commit -m '描述'  :一次性提交暂存区所有 创建一个版本
+
+
+git log:查看版本记录
+
+git reset --hard HEAD~n :回退n个版本 HEAD～n 或者HEAD^^^^^^ n个 HEAD指向最新版本
+git reset --hard 版本号: 回退到（前进）指定版本
+
+git reflog:查看操作记录
+git status:查看工作状态
+git checkout -- 文件名: （加入暂存区之前）撤销工作区改动
+git reset HEAD 文件名:取消暂存
+
+git diff HEAD~n -- 文件名：对比版本库中版本n与工作区的文件的不同
+git diff HEAD~n1 HEAD~n2 -- 文件名： 对比两个版本中某文件的不同
+
+在工作区用删除文件
+用git rm 文件名 将删除提交暂存区
+再创建一个删除的版本
+
+
+
+分支基本操作
+--------------------
+git branch:查看当前有多少分支
+git checkout -b 分支名:创建并切换到一个新的分支
+git checkout 分支名：切换分支
+git merge 分支名:快速合并分支
+git branch -d 分支名：删除分支
+
+git stash 保存工作现场
+git stash list
+git stash pop 恢复工作现场
+
+
+
+
+github
+-----------------------
+git push origin 分支名：推送分支到github
